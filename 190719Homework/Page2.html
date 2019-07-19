@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>會員註冊</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="name_id">會員名稱</label>  
+          <div class="col-md-5">
+          <input id="name_id" name="name_id" type="text" placeholder="王小明" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Password input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="psd">會員密碼</label>
+          <div class="col-md-5">
+            <input id="psd" name="psd" type="password" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="email">e-mail</label>  
+          <div class="col-md-5">
+          <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="radios">是否訂閱</label>
+          <div class="col-md-4"> 
+            <label class="radio-inline" for="radios-0">
+              <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+              是
+            </label> 
+            <label class="radio-inline" for="radios-1">
+              <input type="radio" name="radios" id="radios-1" value="2">
+              否
+            </label>
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <button id="button" name="submit" class="btn-default btn-submit">提交</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+        <script src="js/jquery.js"></script>
+        <script>
+            $(".btn_submit").on('click',function(){
+                if(!$('#name_id').val()){
+                    alert('請輸入姓名')
+                    return  false;
+                }
+
+            })
+
+        </script>
+
+
+        
+</body>
+</html>
