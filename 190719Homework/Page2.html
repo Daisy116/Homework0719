@@ -14,28 +14,27 @@
         <legend>會員註冊</legend>
         
         <!-- Text input-->
-        <div class="form-group">
+        <div class="form-group ">
           <label class="col-md-4 control-label" for="name_id">會員名稱</label>  
-          <div class="col-md-5">
+          <!-- <div class="col-md-5"> -->
           <input id="name_id" name="name_id" type="text" placeholder="王小明" class="form-control input-md">
             
-          </div>
+          <!-- </div> -->
         </div>
         
         <!-- Password input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="psd">會員密碼</label>
-          <div class="col-md-5">
+          <!-- <div class="col-md-5"> -->
             <input id="psd" name="psd" type="password" placeholder="" class="form-control input-md">
             
-          </div>
+          <!-- </div> -->
         </div>
         
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="email">e-mail</label>  
-          <div class="col-md-5">
-          <input id="email" name="email" type="text" placeholder="" class="form-control input-md">
+          <label for="temail">e-mail</label>  
+          <input id="temail" name="email" type="text" placeholder="" class="form-control input-md">
             
           </div>
         </div>
@@ -43,7 +42,7 @@
         <!-- Multiple Radios (inline) -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="radios">是否訂閱</label>
-          <div class="col-md-4"> 
+          <!-- <div class="col-md-4">  -->
             <label class="radio-inline" for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
               是
@@ -52,14 +51,13 @@
               <input type="radio" name="radios" id="radios-1" value="2">
               否
             </label>
-          </div>
+          <!-- </div> -->
         </div>
         
         <!-- Button -->
-        <div class="form-group">
           <label class="col-md-4 control-label" for="submit"></label>
           <div class="col-md-4">
-            <button id="button" name="submit" class="btn-default btn-submit">提交</button>
+            <button type="button" class="btn-default btn_submit">提交</button>
           </div>
         </div>
         
@@ -72,6 +70,15 @@
                     alert('請輸入姓名')
                     return  false;
                 }
+                if(!$('#psd').val()){
+                    alert('請輸入密碼')
+                    return  false;
+                }
+                if(!$('#temail').val()){
+                    alert('請輸入信箱')
+                    return  false;
+                }           
+                $('form').submit();
 
             })
 
