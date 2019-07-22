@@ -5,44 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      form {
+          border:solid 15px goldenrod;
+          border-radius:50px 0px; 
+          background-color: lightsteelblue;
+          font-size:20px;
+          margin:0px auto;
+       }
+       body {
+          background-image:url("img7.jpg");
+          background-repeat:repeat-x;
+        } 
+    </style>
 </head>
 <body>
-    <form class="form-horizontal">
-        <fieldset>
-        
+    <div>    
+      <p style="font-size:100px;color:rgb(76, 102, 219);">
+        .
+      </p> 
+    </div>
+    <form>
+        <fieldset>        
         <!-- Form Name -->
-        <legend>會員註冊</legend>
-        
-        <!-- Text input-->
-        <div class="form-group ">
-          <label class="col-md-4 control-label" for="name_id">會員名稱</label>  
-          <!-- <div class="col-md-5"> -->
-          <input id="name_id" name="name_id" type="text" placeholder="王小明" class="form-control input-md">
-            
-          <!-- </div> -->
-        </div>
-        
-        <!-- Password input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="psd">會員密碼</label>
-          <!-- <div class="col-md-5"> -->
-            <input id="psd" name="psd" type="password" placeholder="" class="form-control input-md">
-            
-          <!-- </div> -->
-        </div>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label for="temail">e-mail</label>  
-          <input id="temail" name="email" type="text" placeholder="" class="form-control input-md">
-            
-          </div>
-        </div>
-        
-        <!-- Multiple Radios (inline) -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="radios">是否訂閱</label>
-          <!-- <div class="col-md-4">  -->
+        <!-- <legend>會員註冊</legend> -->        
+
+        <div class="form-group " >
+          <p>
+            <label class="col-md-4 col-md-1" for="name_id">會員名稱</label>  
+            <input id="name_id" name="name_id" type="text" placeholder="王小明" class="input-md col-md-1">
+          </p>
+          <br>
+          <hr>
+          <p>
+            <label class="col-md-1" for="psd">會員密碼</label>
+            <input id="psd" name="psd" type="password" placeholder="" class="input-md col-md-1">
+          </p>
+          <br>
+          <hr>
+          <p>
+            <label for="temail" class="col-md-2 col-md-1">e-mail</label>  
+            <input id="temail" name="email" type="text" placeholder="" class="input-md col-md-1">
+          </p>
+          <br>
+          <hr>
+          <p>
+            <label class="col-md-2 col-md-1" for="radios">是否訂閱</label>
             <label class="radio-inline" for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
               是
@@ -51,18 +60,17 @@
               <input type="radio" name="radios" id="radios-1" value="2">
               否
             </label>
-          <!-- </div> -->
+          </p>
+          <br>
+          <hr>
+          <!-- Button -->
+          <label class="col-md-1" for="submit"></label>
+          <button type="button" class="btn btn_submit btn-success btn-lg">提交</button>            
         </div>
-        
-        <!-- Button -->
-          <label class="col-md-4 control-label" for="submit"></label>
-          <div class="col-md-4">
-            <button type="button" class="btn-default btn_submit">提交</button>
-          </div>
-        </div>
-        
         </fieldset>
         </form>
+
+
         <script src="js/jquery.js"></script>
         <script>
             $(".btn_submit").on('click',function(){
